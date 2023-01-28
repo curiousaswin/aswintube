@@ -2,15 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        h1{
-            text-align:Center;
-        }
-        td{
-            border:2px solid black;
-        }
-    </style>
+    <title>Upload A Video | AswinTube</title>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 
@@ -24,16 +16,63 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<h1>AswinTube</h1>
-<div style="text-align:right;"><a href="/upload.html" class="btn btn-primary">Upload</a></div>
-<table>
-    <tr><td colspan="5"><h4>Recomended</h4></td></tr>
-    <tr><Td></Td><td></td><td></td><td></td></tr>
-     <tr><Td></Td><td></td><td></td><td></td></tr>
-      <tr><Td></Td><td></td><td></td><td></td></tr>
-       <tr><Td></Td><td></td><td></td><td></td></tr>
-        <tr><Td></Td><td></td><td></td><td></td></tr>
-</table>
+<!-- The Modal -->
+<div class="modal" id="upload">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Upload a video</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+       <!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/meqwegev"
+  method="POST"
+  enctype="multipart/form-data" >
+  <label>
+    Video Title
+    <input type="text" name="title">
+  </label>
+   <label>
+    Description
+    <input type="text" name="desc">
+  </label>
+  <label>
+    Your Video:
+    <input type="file" name="upload">
+  </label>
+   <label>
+    Thumbnail
+    <input type="file" name="thumb">
+  </label>
+  <button type="submit" class="btn btn-primary">Upload</button>
+</form>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script>
+    
+   window.onload = function () {
+        // https://getbootstrap.com/docs/5.0/components/modal/#via-javascript
+        let myModal = new bootstrap.Modal(
+          document.getElementById("upload"),
+          {}
+        );
+        // https://getbootstrap.com/docs/5.0/components/modal/#show
+        myModal.show();
+      };
+</script>
 </body>
 </html>
