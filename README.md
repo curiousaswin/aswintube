@@ -1,7 +1,5 @@
 # AswinTube
 
---Code for Aswin's Good Apps' AswinTube.---
-
---Only Available for pre-release---
+--One Stop Website for all things in AGAS---
 
 Not avalaible yet
