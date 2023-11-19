@@ -118,7 +118,7 @@
 $(document).ready(function(){
   $("#musictxt").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    $("#musiclist tr").filter(function() {
+    $("#productlist tr").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
